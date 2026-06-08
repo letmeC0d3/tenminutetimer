@@ -110,6 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initialize display
   updateTimerDisplay();
+  updateFavicon();
 
   // --- Core Timer Logic ---
   
