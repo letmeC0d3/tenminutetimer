@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LEQFHFGL9K"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-LEQFHFGL9K');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Contact Us - Ten Minute Timer</title>
+  <meta name="description" content="Get in touch with the team at Ten Minute Timer. Submit your questions, feedback, or sound feature requests using our simple contact form.">
+  <link rel="canonical" href="https://tenminutetimer.com/contact.html">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tenminutetimer.com/contact.html">
+  <meta property="og:title" content="Contact Us - Ten Minute Timer">
+  <meta property="og:description" content="Reach out to the developers of Ten Minute Timer for feedback, support, or features requests.">
+  <meta property="og:image" content="https://tenminutetimer.com/assets/images/og-image.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⏱️</text></svg>">
+
+  <!-- Preconnect to Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo" id="header-logo">
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10" stroke-width="2"/>
+          <polyline points="12 6 12 12 16 14" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span class="logo-text-desktop">TenMinuteTimer.com</span>
+        <span class="logo-text-mobile">10 Min Timer</span>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="5-minute-timer.html">5 Min Timer</a></li>
+          <li><a href="index.html">10 Min Timer</a></li>
+          <li><a href="15-minute-timer.html">15 Min Timer</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Theme">
+          <!-- Dynamically populated by main.js -->
+        </button>
+        <button class="menu-btn" id="menu-btn" aria-label="Toggle Menu" aria-expanded="false">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main>
+    <section class="seo-section" aria-label="Contact Form Section">
+      <div class="seo-card form-card">
+        <h1>Contact Us</h1>
+        <p>Have an idea for a new synthesized soundscape? Encountered an issue on a specific device? Or just want to say thanks? We would love to hear from you. Fill out the form below, and we will get back to you as soon as possible.</p>
+        
+        <!-- Interactive Form -->
+        <form id="contact-form" action="#" method="POST">
+          
+          <div class="form-group">
+            <label for="form-name">Full Name</label>
+            <input type="text" id="form-name" placeholder="John Doe" required autocomplete="name">
+          </div>
+
+          <div class="form-group">
+            <label for="form-email">Email Address</label>
+            <input type="email" id="form-email" placeholder="john@example.com" required autocomplete="email">
+          </div>
+
+          <div class="form-group">
+            <label for="form-message">Your Message</label>
+            <textarea id="form-message" placeholder="Type your questions or feedback here..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">Send Message</button>
+
+          <!-- Form feedback prompt -->
+          <div class="form-feedback" id="form-feedback" role="alert" aria-live="polite"></div>
+
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="font-size: 1.25rem;">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" stroke-width="2"/>
+            <polyline points="12 6 12 12 16 14" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span class="logo-text-desktop">TenMinuteTimer.com</span>
+          <span class="logo-text-mobile">10 Min Timer</span>
+        </a>
+        <p>A beautiful, high-precision web countdown timer with integrated focus music. Designed for productivity, classrooms, study, and play.</p>
+      </div>
+      <div class="footer-nav">
+        <h4>Timers</h4>
+        <ul>
+          <li><a href="5-minute-timer.html">5 Minute Timer</a></li>
+          <li><a href="index.html">10 Minute Timer</a></li>
+          <li><a href="15-minute-timer.html">15 Minute Timer</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav">
+        <h4>Legal & Info</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 TenMinuteTimer.com. All rights reserved.</span>
+        <span>Made for focused minds.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

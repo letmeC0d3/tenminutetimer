@@ -1,0 +1,8 @@
+# Robots.txt for TenMinuteTimer.com
+# Allowed all search agents to crawl the entire website
+
+User-agent: *
+Allow: /
+
+# Sitemap Location
+Sitemap: https://tenminutetimer.com/sitemap.xml

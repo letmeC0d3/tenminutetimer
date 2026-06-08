@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LEQFHFGL9K"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-LEQFHFGL9K');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>10 Minute Timer - Online 10-Min Countdown with Music</title>
+  <meta name="description" content="Set a ten minute timer for kids, study, or classroom. Start a cute ten minute timer countdown with relaxing background music. Free, online, and mobile friendly.">
+  <meta name="keywords" content="ten minute timer, ten minute timer with music, set a ten minute timer, a ten minute timer, set ten minute timer, ten minute timer for kids, ten minute timer kids, online ten minute timer, start a ten minute timer, ten minute timer for classroom, cute ten minute timer, ten minute timer countdown">
+  <link rel="canonical" href="https://tenminutetimer.com/">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tenminutetimer.com/">
+  <meta property="og:title" content="10 Minute Timer - Online 10-Min Countdown with Music">
+  <meta property="og:description" content="Start a cute ten minute timer countdown. Set a 10 min timer with ambient background music for kids, study, work, or classroom.">
+  <meta property="og:image" content="https://tenminutetimer.com/assets/images/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://tenminutetimer.com/">
+  <meta property="twitter:title" content="10 Minute Timer - Online 10-Min Countdown with Music">
+  <meta property="twitter:description" content="Start a cute ten minute timer countdown. Set a 10 min timer with ambient background music for kids, study, work, or classroom.">
+  <meta property="twitter:image" content="https://tenminutetimer.com/assets/images/og-image.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⏱️</text></svg>">
+
+  <!-- Preconnect to Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- JSON-LD Structured Data for WebApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Ten Minute Timer",
+    "url": "https://tenminutetimer.com/",
+    "description": "An online countdown timer that sets a ten minute timer with optional relaxing ambient music. Ideal for classrooms, study, and productivity.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "Requires JavaScript and HTML5 Audio support.",
+    "featureList": [
+      "10 minute countdown timer",
+      "Web Audio API sound synthesis",
+      "Ambient background music options (Rain, Ocean, Focus Drone, Lofi)",
+      "Custom timer preset options",
+      "Light and dark mode theme toggling"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD Structured Data for FAQ Page -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I set a ten minute timer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Setting a ten minute timer is simple: click the 'Start' button in the center of the timer wheel. It will immediately begin counting down from 10:00. You can pause it at any time, or reset it back to 10 minutes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I play background music with this ten minute timer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, this online timer features built-in ambient music. Select a soundscape like Rain Sounds, Ocean Waves, Cosmic Drone, or Lofi Synth Chords from the background music menu to help you focus or relax."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this ten minute timer good for kids and classrooms?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. It's designed to be clean, visual, and highly legible, making it an excellent ten minute timer for classroom activities, games, reading blocks, or kids' bedtime count downs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will the timer sound trigger if I switch browser tabs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The timer uses high-precision timers and keeps a continuous sound connection alive, meaning it will remain accurate and trigger your alarm even if you minimize the browser or switch to another tab."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo" id="header-logo">
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10" stroke-width="2"/>
+          <polyline points="12 6 12 12 16 14" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span class="logo-text-desktop">TenMinuteTimer.com</span>
+        <span class="logo-text-mobile">10 Min Timer</span>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="5-minute-timer.html">5 Min Timer</a></li>
+          <li><a href="index.html" class="active">10 Min Timer</a></li>
+          <li><a href="15-minute-timer.html">15 Min Timer</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Theme">
+          <!-- Dynamically populated by main.js -->
+        </button>
+        <button class="menu-btn" id="menu-btn" aria-label="Toggle Menu" aria-expanded="false">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main data-default-time="600">
+    
+    <!-- Hero / Timer Card Section -->
+    <section class="timer-hero" aria-label="Interactive Timer Widget">
+      <div class="timer-card" id="timer-widget">
+        
+        <!-- Red pulsing glow when alarm finishes -->
+        <div class="timer-pulse-overlay"></div>
+
+        <!-- SVG Ring & Numbers -->
+        <div class="timer-display-wrapper">
+          <svg class="timer-ring-svg" viewBox="0 0 280 280">
+            <defs>
+              <linearGradient id="timer-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="var(--color-primary)" />
+                <stop offset="100%" stop-color="var(--color-secondary)" />
+              </linearGradient>
+            </defs>
+            <circle class="timer-ring-bg" cx="140" cy="140" r="120" />
+            <circle class="timer-ring-progress" id="timer-progress-ring" cx="140" cy="140" r="120" />
+          </svg>
+          <div class="timer-text-container">
+            <span class="timer-digits" id="timer-digits" aria-live="polite">10:00</span>
+            <span class="timer-label" id="timer-label">Remaining</span>
+          </div>
+        </div>
+
+        <!-- Main Buttons -->
+        <div class="timer-controls">
+          <button class="control-btn btn-reset" id="btn-reset" aria-label="Reset Timer">
+            <svg viewBox="0 0 24 24"><path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/></svg>
+          </button>
+          <button class="control-btn btn-play-pause" id="btn-play-pause" aria-label="Start Timer">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+          <button class="control-btn btn-reset" style="opacity: 0; pointer-events: none;" aria-hidden="true">
+            <!-- Balance spacer -->
+          </button>
+        </div>
+
+        <!-- Settings Options -->
+        <div class="settings-panel">
+          <div class="settings-control-group settings-dropdowns-group">
+            
+            <!-- Sound Alerter Dropdown -->
+            <div class="settings-row" style="flex: 1;">
+              <label for="select-alarm">Alarm Sound</label>
+              <div class="select-wrapper">
+                <select id="select-alarm">
+                  <option value="chime" selected>Warm Chime</option>
+                  <option value="beep">Digital Beep</option>
+                  <option value="bell">Tibetan Bell</option>
+                  <option value="woodblock">Woodblock Click</option>
+                  <option value="none">None (Silent)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Ambient Music Dropdown -->
+            <div class="settings-row" style="flex: 1;">
+              <label for="select-music">Focus Music</label>
+              <div class="select-wrapper">
+                <select id="select-music">
+                  <option value="none" selected>None (Silence)</option>
+                  <option value="rain">Rain Sounds</option>
+                  <option value="ocean">Ocean Waves</option>
+                  <option value="drone">Cosmic Drone</option>
+                  <option value="synth">Lofi Synth Chords</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Volume Controls -->
+          <div class="settings-control-group settings-volume-group">
+            <button class="btn-icon-action" id="btn-test-alarm" aria-label="Test Alarm Sound">
+              <svg viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+            </button>
+            <div class="volume-control">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+              <input type="range" class="volume-slider" id="volume-slider" min="0" max="1" step="0.05" value="0.75" aria-label="Volume Slider">
+            </div>
+          </div>
+        </div>
+
+        <!-- Presets -->
+        <div class="presets-grid">
+          <button class="preset-btn" data-time="60" aria-label="Set 1 minute timer">1 Min</button>
+          <button class="preset-btn" data-time="180" aria-label="Set 3 minute timer">3 Min</button>
+          <button class="preset-btn" data-time="300" aria-label="Set 5 minute timer">5 Min</button>
+          <button class="preset-btn active" data-time="600" aria-label="Set 10 minute timer">10 Min</button>
+          <button class="preset-btn" data-time="900" aria-label="Set 15 minute timer">15 Min</button>
+          <button class="preset-btn" data-time="custom" id="btn-custom-toggle" aria-label="Set Custom Timer Length">Custom</button>
+        </div>
+
+        <!-- Custom Input Drawer -->
+        <div class="custom-drawer" id="custom-drawer">
+          <div class="custom-input-group">
+            <input type="number" id="custom-min" placeholder="00" min="0" max="599" aria-label="Custom Minutes">
+            <span>m</span>
+            <input type="number" id="custom-sec" placeholder="00" min="0" max="59" aria-label="Custom Seconds">
+            <span>s</span>
+            <button class="btn-custom-start" id="btn-custom-start">Start</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SEO Optimized Content Area -->
+    <section class="seo-section" aria-label="Information about Ten Minute Timers">
+      <div class="seo-card">
+        <h1>Online Ten Minute Timer: Free 10-Min Countdown with Music</h1>
+        <p>Welcome to the ultimate, premium <strong>online ten minute timer</strong>. Whether you need to time a study session, set a visual timer for kids, manage a classroom activity, or block out a 10-minute work sprint, our countdown timer is designed to look beautiful, run with absolute precision, and help you stay in flow.</p>
+        
+        <p>This is not just <strong>a ten minute timer</strong>—it is an interactive productivity system. Experience custom alarm alerts, choose relaxing focus music that plays while the clock ticks, and toggle between Light and Dark mode options depending on your preference.</p>
+        
+        <div class="feature-grid">
+          <div class="feature-box">
+            <h3>🎵 Timer with Music</h3>
+            <p>Listen to rain, ocean waves, or relaxing Lofi beats directly from your browser to maintain focus.</p>
+          </div>
+          <div class="feature-box">
+            <h3>🏫 Classroom Ready</h3>
+            <p>Clean, bold layout with high-contrast elements that are easy to view from the back of the room.</p>
+          </div>
+          <div class="feature-box">
+            <h3>⏱️ Offline Accuracy</h3>
+            <p>Uses high-precision clocks that bypass background tab throttling to trigger alarms on time.</p>
+          </div>
+        </div>
+
+        <h2>How to Set a Ten Minute Timer</h2>
+        <p>To <strong>set ten minute timer</strong> options, follow these quick steps:</p>
+        <ol>
+          <li>Click the central glowing **Play** button. The clock will begin counting down immediately.</li>
+          <li>Choose an **Alarm Sound** (like a Warm Chime or Tibetan Singing Bowl) to ring once the countdown completes.</li>
+          <li>Optionally select **Focus Music** to play in the background while you study or work.</li>
+          <li>Need a different duration? Use the **Presets** to start a 1, 3, 5, or 15-minute countdown, or click **Custom** to set your own exact time.</li>
+        </ol>
+
+        <h2>Cute 10 Minute Timer with Music for Study & Focus</h2>
+        <p>For those searching for a **cute ten minute timer** that looks elegant and feels premium, we have you covered. Our application has a minimalist glassmorphic design that matches any aesthetic. Under the **Focus Music** dropdown, you can customize your countdown:</p>
+        <ul>
+          <li><strong>Rain Sounds</strong>: Gentle rain shower synthesized in real-time to drown out distractions.</li>
+          <li><strong>Ocean Waves</strong>: Soft swells that wash in and out in 12-second cycles, ideal for meditation.</li>
+          <li><strong>Cosmic Drone</strong>: Deep, warm detuned chords that ground your focus and help you enter deep work.</li>
+          <li><strong>Lofi Synth Chords</strong>: Repeating chill chord sequence for a relaxed, rhythmic vibe.</li>
+        </ul>
+        <p>Running a **ten minute timer with music** blocks out background distraction and helps you make the most of your 10-minute sprints.</p>
+
+        <h2>Ten Minute Timer for Kids & Classroom Activities</h2>
+        <p>Teachers around the world love using a **ten minute timer for classroom** management. Keeping lessons structured into short, manageable chunks is highly effective. Here's why this is the perfect **ten minute timer kids** will love:</p>
+        <ul>
+          <li><strong>Highly Visual</strong>: The circular progress ring drains dynamically, helping kids see exactly how much time is left.</li>
+          <li><strong>Non-Startling Sounds</strong>: Alarms like the 'Tibetan Bell' and 'Warm Chime' notify students gently without creating loud, jarring noise.</li>
+          <li><strong>No Download Needed</strong>: Run it instantly on tablets, smartboards, desktops, or phones without downloading heavy apps.</li>
+        </ul>
+
+        <h2>Why Use a 10 Minute Timer Countdown?</h2>
+        <p>The practice of breaking tasks down into small, digestible time blocks is known as timeboxing. Setting a **ten minute timer countdown** is perfect for:</p>
+        <ul>
+          <li><strong>Beat Procrastination</strong>: Tell yourself you will work for just ten minutes. Usually, once the timer goes off, you'll want to keep going.</li>
+          <li><strong>Quick Workouts & Meditation</strong>: Take a 10-minute mental health break, stretch, or do a core workout.</li>
+          <li><strong>Kitchen Helper</strong>: Keep track of boiling eggs, steeping tea, or baking items accurately.</li>
+        </ul>
+
+        <!-- Accordion FAQ Area -->
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+          
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How do I start a ten minute timer?</span>
+              <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Just visit the page and click the central circular Play button. The countdown will begin immediately. You can pause the countdown at any point by clicking it again, or click the circular arrow Reset button to return to 10:00.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Can I play background music with this ten minute timer?</span>
+              <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Select from the "Focus Music" dropdown to play synthesized soundscapes such as Rain, Ocean Waves, Cosmic Drone, or Lofi Chords. The music plays automatically while the timer runs, and pauses when the timer is paused.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Is this ten minute timer good for kids and classrooms?</span>
+              <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Our website is clean, free of annoying flashing ads, and features a high-contrast circular progress bar. This makes it perfect for smartboards and kids' study sessions.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Does the timer sound an alarm when it finishes?</span>
+              <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. You can choose from several synthesized alarms including Warm Chime, Digital Beep, Tibetan Bell, or Woodblock. Alternatively, select "None" if you prefer a silent, purely visual alert.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Will the timer work if I switch browser tabs?</span>
+              <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. The timer uses the system clock end-time logic which is not affected by background tab sleep/throttling. The synthesized audio will trigger immediately when the timer hits zero, even if the tab is inactive.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Global Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="font-size: 1.25rem;">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" stroke-width="2"/>
+            <polyline points="12 6 12 12 16 14" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span class="logo-text-desktop">TenMinuteTimer.com</span>
+          <span class="logo-text-mobile">10 Min Timer</span>
+        </a>
+        <p>A beautiful, high-precision web countdown timer with integrated focus music. Designed for productivity, classrooms, study, and play.</p>
+      </div>
+      <div class="footer-nav">
+        <h4>Timers</h4>
+        <ul>
+          <li><a href="5-minute-timer.html">5 Minute Timer</a></li>
+          <li><a href="index.html">10 Minute Timer</a></li>
+          <li><a href="15-minute-timer.html">15 Minute Timer</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav">
+        <h4>Legal & Info</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 TenMinuteTimer.com. All rights reserved.</span>
+        <span>Made for focused minds.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/timer.js"></script>
+</body>
+</html>

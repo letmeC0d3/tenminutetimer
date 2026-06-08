@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LEQFHFGL9K"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-LEQFHFGL9K');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>5 Minute Timer - Online 5-Min Countdown with Music</title>
+  <meta name="description" content="Set a five minute timer online for breathing exercises, study, or kitchen. Start a quick 5 minute timer countdown with relaxing background music. Free & simple.">
+  <meta name="keywords" content="5 minute timer, 5 min timer, five minute timer, set a 5 minute timer, 5 minute countdown, online 5 minute timer, five min countdown">
+  <link rel="canonical" href="https://tenminutetimer.com/5-minute-timer.html">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tenminutetimer.com/5-minute-timer.html">
+  <meta property="og:title" content="5 Minute Timer - Online 5-Min Countdown with Music">
+  <meta property="og:description" content="Start a 5 minute timer countdown. Set a five-minute timer with ambient background music for Pomodoro breaks, quick focus, or kitchen cooking.">
+  <meta property="og:image" content="https://tenminutetimer.com/assets/images/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://tenminutetimer.com/5-minute-timer.html">
+  <meta property="twitter:title" content="5 Minute Timer - Online 5-Min Countdown with Music">
+  <meta property="twitter:description" content="Start a 5 minute timer countdown. Set a five-minute timer with ambient background music for Pomodoro breaks, quick focus, or kitchen cooking.">
+  <meta property="twitter:image" content="https://tenminutetimer.com/assets/images/og-image.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⏱️</text></svg>">
+
+  <!-- Preconnect to Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- JSON-LD Structured Data for WebApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Five Minute Timer",
+    "url": "https://tenminutetimer.com/5-minute-timer.html",
+    "description": "An online countdown timer that sets a five minute timer with optional relaxing ambient music. Ideal for Pomodoro breaks, workouts, and quick tasks.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "Requires JavaScript and HTML5 Audio support.",
+    "featureList": [
+      "5 minute countdown timer",
+      "Web Audio API sound synthesis",
+      "Ambient background music options (Rain, Ocean, Focus Drone, Lofi)",
+      "Light and dark mode theme toggling"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD Structured Data for FAQ Page -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I set a 5 minute timer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Simply load this page and click the central Play button. The clock is pre-set to 5:00 and will immediately start counting down to zero."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are common uses for a five minute timer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A 5-minute timer is perfect for tracking short rest breaks in the Pomodoro Technique, performing breathing or mindfulness exercises, steeping tea, boiling soft-boiled eggs, or conducting brief classroom games."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does this timer work on mobile phones?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, our website is fully responsive and optimized for mobile screens. You can run it on iOS or Android browsers without downloading any app."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo" id="header-logo">
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10" stroke-width="2"/>
+          <polyline points="12 6 12 12 16 14" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span class="logo-text-desktop">TenMinuteTimer.com</span>
+        <span class="logo-text-mobile">10 Min Timer</span>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="5-minute-timer.html" class="active">5 Min Timer</a></li>
+          <li><a href="index.html">10 Min Timer</a></li>
+          <li><a href="15-minute-timer.html">15 Min Timer</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Theme">
+          <!-- Dynamically populated by main.js -->
+        </button>
+        <button class="menu-btn" id="menu-btn" aria-label="Toggle Menu" aria-expanded="false">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main data-default-time="300">
+    
+    <!-- Hero / Timer Card Section -->
+    <section class="timer-hero" aria-label="Interactive Timer Widget">
+      <div class="timer-card" id="timer-widget">
+        
+        <!-- Red pulsing glow when alarm finishes -->
+        <div class="timer-pulse-overlay"></div>
+
+        <!-- SVG Ring & Numbers -->
+        <div class="timer-display-wrapper">
+          <svg class="timer-ring-svg" viewBox="0 0 280 280">
+            <defs>
+              <linearGradient id="timer-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="var(--color-primary)" />
+                <stop offset="100%" stop-color="var(--color-secondary)" />
+              </linearGradient>
+            </defs>
+            <circle class="timer-ring-bg" cx="140" cy="140" r="120" />
+            <circle class="timer-ring-progress" id="timer-progress-ring" cx="140" cy="140" r="120" />
+          </svg>
+          <div class="timer-text-container">
+            <span class="timer-digits" id="timer-digits" aria-live="polite">05:00</span>
+            <span class="timer-label" id="timer-label">Remaining</span>
+          </div>
+        </div>
+
+        <!-- Main Controls -->
+        <div class="timer-controls">
+          <button class="control-btn btn-reset" id="btn-reset" aria-label="Reset Timer">
+            <svg viewBox="0 0 24 24"><path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/></svg>
+          </button>
+          <button class="control-btn btn-play-pause" id="btn-play-pause" aria-label="Start Timer">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+          <button class="control-btn btn-reset" style="opacity: 0; pointer-events: none;" aria-hidden="true">
+            <!-- Balance spacer -->
+          </button>
+        </div>
+
+        <!-- Settings Options -->
+        <div class="settings-panel">
+          <div class="settings-control-group settings-dropdowns-group">
+            
+            <!-- Sound Alerter Dropdown -->
+            <div class="settings-row" style="flex: 1;">
+              <label for="select-alarm">Alarm Sound</label>
+              <div class="select-wrapper">
+                <select id="select-alarm">
+                  <option value="chime" selected>Warm Chime</option>
+                  <option value="beep">Digital Beep</option>
+                  <option value="bell">Tibetan Bell</option>
+                  <option value="woodblock">Woodblock Click</option>
+                  <option value="none">None (Silent)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Ambient Music Dropdown -->
+            <div class="settings-row" style="flex: 1;">
+              <label for="select-music">Focus Music</label>
+              <div class="select-wrapper">
+                <select id="select-music">
+                  <option value="none" selected>None (Silence)</option>
+                  <option value="rain">Rain Sounds</option>
+                  <option value="ocean">Ocean Waves</option>
+                  <option value="drone">Cosmic Drone</option>
+                  <option value="synth">Lofi Synth Chords</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Volume Controls -->
+          <div class="settings-control-group settings-volume-group">
+            <button class="btn-icon-action" id="btn-test-alarm" aria-label="Test Alarm Sound">
+              <svg viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+            </button>
+            <div class="volume-control">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+              <input type="range" class="volume-slider" id="volume-slider" min="0" max="1" step="0.05" value="0.75" aria-label="Volume Slider">
+            </div>
+          </div>
+        </div>
+
+        <!-- Presets -->
+        <div class="presets-grid">
+          <button class="preset-btn" data-time="60" aria-label="Set 1 minute timer">1 Min</button>
+          <button class="preset-btn" data-time="180" aria-label="Set 3 minute timer">3 Min</button>
+          <button class="preset-btn active" data-time="300" aria-label="Set 5 minute timer">5 Min</button>
+          <button class="preset-btn" data-time="600" aria-label="Set 10 minute timer">10 Min</button>
+          <button class="preset-btn" data-time="900" aria-label="Set 15 minute timer">15 Min</button>
+          <button class="preset-btn" data-time="custom" id="btn-custom-toggle" aria-label="Set Custom Timer Length">Custom</button>
+        </div>
+
+        <!-- Custom Input Drawer -->
+        <div class="custom-drawer" id="custom-drawer">
+          <div class="custom-input-group">
+            <input type="number" id="custom-min" placeholder="00" min="0" max="599" aria-label="Custom Minutes">
+            <span>m</span>
+            <input type="number" id="custom-sec" placeholder="00" min="0" max="59" aria-label="Custom Seconds">
+            <span>s</span>
+            <button class="btn-custom-start" id="btn-custom-start">Start</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SEO Optimized Content Area -->
+    <section class="seo-section" aria-label="Information about Five Minute Timers">
+      <div class="seo-card">
+        <h1>Online 5 Minute Timer: Free 5-Min Countdown</h1>
+        <p>Looking for a quick, reliable <strong>5 minute timer</strong>? Whether you are practicing breathing techniques, timing a quick soft-boiled egg, or running a 5-minute classroom break, our free web countdown timer provides a beautiful, modern solution. Pre-set to 5:00, all you need to do is click Play to get started.</p>
+        
+        <p>This <strong>five minute timer</strong> works seamlessly on all devices. With real-time circular countdown progress and built-in ambient noise, you can enjoy a highly visual, distracting-free countdown experience.</p>
+        
+        <div class="feature-grid">
+          <div class="feature-box">
+            <h3>🧘 Mindful Breaks</h3>
+            <p>Perfect for taking a quick five-minute meditation, stretch, or breathing block during your workday.</p>
+          </div>
+          <div class="feature-box">
+            <h3>🍳 Kitchen Helper</h3>
+            <p>Boiling eggs, brewing green tea, or warming up food? Keep track with precise synthesised alarms.</p>
+          </div>
+          <div class="feature-box">
+            <h3>🍅 Pomodoro Rest</h3>
+            <p>Ideal for tracking the standard 5-minute break period in the classic Pomodoro productivity method.</p>
+          </div>
+        </div>
+
+        <h2>How to Use the 5 Min Timer</h2>
+        <p>To start your **five minute timer countdown**, just:</p>
+        <ol>
+          <li>Press the glowing **Play** button in the center of the ring.</li>
+          <li>Choose from relaxing background sounds like **Rain** or **Ocean Waves** if you are meditating or taking a break.</li>
+          <li>Wait for the timer to reach 00:00. Once it finishes, the screen will flash and your selected alarm (e.g. Warm Chime) will trigger.</li>
+        </ol>
+
+        <h2>Common Uses for a 5 Minute Countdown</h2>
+        <p>A **5 minute countdown** is one of the most versatile timeframes in daily life:</p>
+        <ul>
+          <li><strong>Breathing Exercises</strong>: Box breathing or 4-7-8 breathing techniques fit perfectly into a 5-minute slot.</li>
+          <li><strong>Quick Tidy-Up</strong>: Challenge yourself or your kids to clean up as much of a room as possible in five minutes.</li>
+          <li><strong>Plank or Workout Tracker</strong>: Track short workouts, HIIT intervals, or core exercises with ease.</li>
+        </ul>
+
+        <!-- Accordion FAQ Area -->
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+          
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How do I set a 5 minute timer?</span>
+              <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Simple! Load this page and click the play button. The widget is pre-configured to exactly 5:00. If you wish to reset it back to 5 minutes, click the reset arrow icon.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What are the best uses for a five minute timer?</span>
+              <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>A five-minute timer is most popular for Pomodoro rest intervals, steeping green and black teas, boiling eggs, brief morning stretches, and short speed-writing drills.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Will the sound play if my screen is locked?</span>
+              <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. The Web Audio API operates in the browser process. As long as your browser remains active in memory, the synthesizer alarm will play once the timer completes, even on mobile lock screens.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Global Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="font-size: 1.25rem;">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" stroke-width="2"/>
+            <polyline points="12 6 12 12 16 14" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span class="logo-text-desktop">TenMinuteTimer.com</span>
+          <span class="logo-text-mobile">10 Min Timer</span>
+        </a>
+        <p>A beautiful, high-precision web countdown timer with integrated focus music. Designed for productivity, classrooms, study, and play.</p>
+      </div>
+      <div class="footer-nav">
+        <h4>Timers</h4>
+        <ul>
+          <li><a href="5-minute-timer.html">5 Minute Timer</a></li>
+          <li><a href="index.html">10 Minute Timer</a></li>
+          <li><a href="15-minute-timer.html">15 Minute Timer</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav">
+        <h4>Legal & Info</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 TenMinuteTimer.com. All rights reserved.</span>
+        <span>Made for focused minds.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/timer.js"></script>
+</body>
+</html>
