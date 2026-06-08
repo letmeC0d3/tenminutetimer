@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="pt" data-theme="dark">
 <head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LEQFHFGL9K"></script>
@@ -22,9 +22,16 @@
   <link rel="alternate" hreflang="de" href="https://tenminutetimer.com/de/15-minute-timer.html" />
   <link rel="alternate" hreflang="pt" href="https://tenminutetimer.com/pt/15-minute-timer.html" />
   <link rel="alternate" hreflang="it" href="https://tenminutetimer.com/it/15-minute-timer.html" />
+  <link rel="alternate" hreflang="x-default" href="https://tenminutetimer.com/pt/15-minute-timer.html" />
+  <link rel="alternate" hreflang="en" href="https://tenminutetimer.com/pt/15-minute-timer.html" />
+  <link rel="alternate" hreflang="es" href="https://tenminutetimer.com/es/15-minute-timer.html" />
+  <link rel="alternate" hreflang="fr" href="https://tenminutetimer.com/fr/15-minute-timer.html" />
+  <link rel="alternate" hreflang="de" href="https://tenminutetimer.com/de/15-minute-timer.html" />
+  <link rel="alternate" hreflang="pt" href="https://tenminutetimer.com/pt/15-minute-timer.html" />
+  <link rel="alternate" hreflang="it" href="https://tenminutetimer.com/it/15-minute-timer.html" />
   <meta name="description" content="Set a fifteen minute timer online for study, yoga, or tasks. Start a quick 15 minute timer countdown with relaxing background music. Free, precise, and simple.">
   <meta name="keywords" content="15 minute timer, 15 min timer, fifteen minute timer, set a 15 minute timer, 15 minute countdown, online 15 minute timer, fifteen min countdown">
-  <link rel="canonical" href="https://tenminutetimer.com/15-minute-timer.html">
+  <link rel="canonical" href="https://tenminutetimer.com/pt/15-minute-timer.html">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
@@ -48,7 +55,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
 
   <!-- JSON-LD Structured Data for WebApplication -->
   <script type="application/ld+json">
@@ -97,7 +104,7 @@
         "name": "Can I select custom alarms for the 15 minute timer?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, you can choose between a Warm Chime, Digital Beep, Tibetan Bell, or Woodblock alarm. A visual flash is also provided when the alarm rings."
+          "text": "Yes, you can choose between a Carrilhão Quente, Digital Beep, Tibetan Bell, or Woodblock alarm. A visual flash is also provided when the alarm rings."
         }
       }
     ]
@@ -119,22 +126,17 @@
       </a>
       <nav aria-label="Main Navigation">
         <ul class="nav-links" id="nav-links">
-          <li><a href="5-minute-timer.html">5 Min Timer</a></li>
-          <li><a href="index.html">10 Min Timer</a></li>
-          <li><a href="15-minute-timer.html" class="active">15 Min Timer</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="5-minute-timer.html">5 Min</a></li>
+          <li><a href="index.html">10 Min</a></li>
+          <li><a href="15-minute-timer.html" class="active">15 Min</a></li>
+          <li><a href="about.html">Sobre Nós</a></li>
+          <li><a href="contact.html">Contato</a></li>
         </ul>
       </nav>
       <div class="nav-actions">
         <div class="language-switcher">
           <select id="select-language" aria-label="Change language">
-            <option value="en" selected>EN</option>
-            <option value="es">ES</option>
-            <option value="fr">FR</option>
-            <option value="de">DE</option>
-            <option value="pt">PT</option>
-            <option value="it">IT</option>
+            <option value="en">EN</option> <option value="es">ES</option> <option value="fr">FR</option> <option value="de">DE</option> <option value="pt" selected>PT</option> <option value="it">IT</option>
           </select>
         </div>
         <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Theme">
@@ -171,7 +173,7 @@
           </svg>
           <div class="timer-text-container">
             <span class="timer-digits" id="timer-digits" aria-live="polite">15:00</span>
-            <span class="timer-label" id="timer-label">Remaining</span>
+            <span class="timer-label" id="timer-label">Restante</span>
           </div>
         </div>
 
@@ -194,28 +196,28 @@
             
             <!-- Sound Alerter Dropdown -->
             <div class="settings-row" style="flex: 1;">
-              <label for="select-alarm">Alarm Sound</label>
+              <label for="select-alarm">Som do Alarme</label>
               <div class="select-wrapper">
                 <select id="select-alarm">
-                  <option value="chime" selected>Warm Chime</option>
+                  <option value="chime" selected>Carrilhão Quente</option>
                   <option value="beep">Digital Beep</option>
                   <option value="bell">Tibetan Bell</option>
-                  <option value="woodblock">Woodblock Click</option>
-                  <option value="none">None (Silent)</option>
+                  <option value="woodblock">Bloco de Madeira Click</option>
+                  <option value="none">Nenhum (Silencioso) (Silent)</option>
                 </select>
               </div>
             </div>
 
             <!-- Ambient Music Dropdown -->
             <div class="settings-row" style="flex: 1;">
-              <label for="select-music">Focus Music</label>
+              <label for="select-music">Música de Foco</label>
               <div class="select-wrapper">
                 <select id="select-music">
-                  <option value="none" selected>None (Silence)</option>
-                  <option value="rain">Rain Sounds</option>
-                  <option value="ocean">Ocean Waves</option>
-                  <option value="drone">Cosmic Drone</option>
-                  <option value="synth">Lofi Synth Chords</option>
+                  <option value="none" selected>None (Nenhum (Silêncio))</option>
+                  <option value="rain">Som de Chuva Sounds</option>
+                  <option value="ocean">Ondas do Mar Waves</option>
+                  <option value="drone">Zumbido Cósmico</option>
+                  <option value="synth">Acordes Lofi</option>
                 </select>
               </div>
             </div>
@@ -235,22 +237,22 @@
 
         <!-- Presets -->
         <div class="presets-grid">
-          <button class="preset-btn" data-time="60" aria-label="Set 1 minute timer">1 Min</button>
-          <button class="preset-btn" data-time="180" aria-label="Set 3 minute timer">3 Min</button>
-          <button class="preset-btn" data-time="300" aria-label="Set 5 minute timer">5 Min</button>
-          <button class="preset-btn" data-time="600" aria-label="Set 10 minute timer">10 Min</button>
-          <button class="preset-btn active" data-time="900" aria-label="Set 15 minute timer">15 Min</button>
-          <button class="preset-btn" data-time="custom" id="btn-custom-toggle" aria-label="Set Custom Timer Length">Custom</button>
+          <button class="preset-btn" data-time="60" aria-label="1 Min">1 Min</button>
+          <button class="preset-btn" data-time="180" aria-label="3 Min">3 Min</button>
+          <button class="preset-btn" data-time="300" aria-label="5 Min">5 Min</button>
+          <button class="preset-btn" data-time="600" aria-label="10 Min">10 Min</button>
+          <button class="preset-btn active" data-time="900" aria-label="15 Min">15 Min</button>
+          <button class="preset-btn" data-time="custom" id="btn-custom-toggle" aria-label="Custom">Personalizado</button>
         </div>
 
         <!-- Custom Input Drawer -->
         <div class="custom-drawer" id="custom-drawer">
           <div class="custom-input-group">
-            <input type="number" id="custom-min" placeholder="00" min="0" max="599" aria-label="Custom Minutes">
+            <input type="number" id="custom-min" placeholder="00" min="0" max="599" aria-label="Minutos">
             <span>m</span>
-            <input type="number" id="custom-sec" placeholder="00" min="0" max="59" aria-label="Custom Seconds">
+            <input type="number" id="custom-sec" placeholder="00" min="0" max="59" aria-label="Segundos">
             <span>s</span>
-            <button class="btn-custom-start" id="btn-custom-start">Start</button>
+            <button class="btn-custom-start" id="btn-custom-start">Iniciar</button>
           </div>
         </div>
 
@@ -260,19 +262,19 @@
     <!-- SEO Optimized Content Area -->
     <section class="seo-section" aria-label="Information about Fifteen Minute Timers">
       <div class="seo-card">
-        <h1>Online 15 Minute Timer: Free 15-Min Countdown</h1>
-        <p>Stay on track with our premium, free <strong>15 minute timer</strong>. Pre-set to exactly 15:00, it's designed to boost productivity for writers, students, and professionals alike. Click the Play icon to start your countdown and experience a clean, distraction-free environment.</p>
+        <h1>Temporizador de 15 Minutos Online: Cronômetro de 15 min grátis</h1>
+        <p>Gerencie seu tempo com eficiência com nosso **temporizador de 15 minutos**. Ajustado para 15:00 exatos, é perfeito para sessões de foco nos estudos ou trabalho.</p>
         
-        <p>A <strong>fifteen minute timer</strong> is the gold standard for micro-productivity sprints. By utilizing our built-in synthesised white noise (like rainfall or ocean swells), you can keep your mind focused and your momentum high.</p>
+        <p>Um **temporizador de quinze minutos** é ideal para se concentrar em uma tarefa de cada vez. Use o barulho de chuva para bloquear ruídos e trabalhar com tranquilidade.</p>
         
         <div class="feature-grid">
           <div class="feature-box">
             <h3>⚡ Micro-Sprints</h3>
-            <p>15 minutes is the ideal timeframe to make a significant dent in your inbox, tidy up, or brainstorm ideas.</p>
+            <p>Siga estes passos simples:</p>
           </div>
           <div class="feature-box">
             <h3>😴 Power Naps</h3>
-            <p>Recharge your body and mind with a quick, restorative 15-minute catnap. Set a gentle chime alarm.</p>
+            <p>Trabalhar em sprints de 15 minutos ajuda a vencer a procrastinação. Saber que o tempo é curto estimula o cérebro a focar no objetivo imediato e a entrar rapidamente em fluxo de trabalho.</p>
           </div>
           <div class="feature-box">
             <h3>🧘 Yoga & Stretch</h3>
@@ -280,29 +282,29 @@
           </div>
         </div>
 
-        <h2>How to Start your 15 Min Timer</h2>
+        <h2>Como iniciar o temporizador de 15 min</h2>
         <p>To set a **15 minute countdown**, follow these simple directions:</p>
         <ol>
-          <li>Press the glowing **Play** button in the center of the countdown circle.</li>
-          <li>Choose an alarm profile (like **Tibetan Bell**) and configure the volume level.</li>
-          <li>Optionally, toggle background sounds (like **Cosmic Drone** or **Lofi Chords**) to block out office noise.</li>
+          <li>Clique em **Iniciar** no centro da tela.</li>
+          <li>Escolha um som de alarme (como o **Sino Tibetano**) e ajuste o volume.</li>
+          <li>Optionally, toggle background sounds (like **Zumbido Cósmico** or **Lofi Chords**) to block out office noise.</li>
           <li>If you finish early or need to start over, click **Reset** to return the clock to 15:00.</li>
         </ol>
 
-        <h2>Why the 15 Minute Countdown is a Productivity Secret</h2>
+        <h2>Por que blocos de 15 minutos funcionam</h2>
         <p>Many writers and designers swear by the 15-minute rule. Setting a **15 minute timer countdown** creates a healthy sense of urgency. The psychological benefit of knowing the clock is ticking encourages you to avoid multi-tasking and focus solely on your target task. Combine it with our real-time synthesized audio waves to enter a state of deep focus instantly.</p>
 
         <!-- Accordion FAQ Area -->
-        <h2>Frequently Asked Questions</h2>
+        <h2>Perguntas Frequentes</h2>
         <div class="faq-container">
           
           <div class="faq-item">
             <button class="faq-question">
-              <span>How do I set a 15 minute timer?</span>
+              <span>Posso usar para tirar uma soneca?</span>
               <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer">
-              <p>Just open this page and press Play. The interface is configured to count down from 15:00. To reset, use the reset arrow button.</p>
+              <p>Sim. Uma soneca curta de 15 minutos restaura a energia sem causar sonolência. O Sino Tibetano oferece um despertar suave e agradável.</p>
             </div>
           </div>
 
@@ -345,10 +347,10 @@
           <span class="logo-text-desktop">TenMinuteTimer.com</span>
           <span class="logo-text-mobile">10 Min Timer</span>
         </a>
-        <p>A beautiful, high-precision web countdown timer with integrated focus music. Designed for productivity, classrooms, study, and play.</p>
+        <p>Um lindo temporizador de contagem regressiva web de alta precisão com música de foco integrada. Projetado para produtividade, salas de aula, estudos e jogos.</p>
       </div>
       <div class="footer-nav">
-        <h4>Timers</h4>
+        <h4>Temporizadores</h4>
         <ul>
           <li><a href="5-minute-timer.html">5 Minute Timer</a></li>
           <li><a href="index.html">10 Minute Timer</a></li>
@@ -356,23 +358,23 @@
         </ul>
       </div>
       <div class="footer-nav">
-        <h4>Legal & Info</h4>
+        <h4>Informações Legais</h4>
         <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="about.html">Sobre Nós</a></li>
+          <li><a href="contact.html">Contato</a></li>
+          <li><a href="privacy.html">Política de Privacidade</a></li>
+          <li><a href="terms.html">Termos de Serviço</a></li>
         </ul>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2026 TenMinuteTimer.com. All rights reserved.</span>
-        <span>Made for focused minds.</span>
+        <span>&copy; 2026 TenMinuteTimer.com. Todos os direitos reservados.</span>
+        <span>Feito para mentes focadas.</span>
       </div>
     </div>
   </footer>
 
   <!-- Scripts -->
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/timer.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/timer.js"></script>
 </body>
 </html>

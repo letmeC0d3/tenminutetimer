@@ -3,6 +3,67 @@
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // --- Multilingual Dictionary for Timer UI ---
+  const textTranslations = {
+    en: {
+      remaining: 'Remaining',
+      timesUp: 'Time\'s Up!',
+      title10: '10 Minute Timer - Online Countdown',
+      title5: '5 Minute Timer - Online Countdown',
+      title15: '15 Minute Timer - Online Countdown',
+      playLabel: 'Play Timer',
+      pauseLabel: 'Pause Timer'
+    },
+    es: {
+      remaining: 'Restante',
+      timesUp: '¡Tiempo agotado!',
+      title10: 'Temporizador de 10 Minutos - Cuenta Atrás en Línea',
+      title5: 'Temporizador de 5 Minutos - Cuenta Atrás en Línea',
+      title15: 'Temporizador de 15 Minutos - Cuenta Atrás en Línea',
+      playLabel: 'Iniciar temporizador',
+      pauseLabel: 'Pausar temporizador'
+    },
+    fr: {
+      remaining: 'Restant',
+      timesUp: 'Temps écoulé !',
+      title10: 'Minuteur 10 Minutes - Compte à Rebours en Ligne',
+      title5: 'Minuteur 5 Minutes - Compte à Rebours en Ligne',
+      title15: 'Minuteur 15 Minutes - Compte à Rebours en Ligne',
+      playLabel: 'Démarrer le minuteur',
+      pauseLabel: 'Pause'
+    },
+    de: {
+      remaining: 'Verbleibend',
+      timesUp: 'Zeit abgelaufen!',
+      title10: '10 Minuten Timer - Online-Countdown',
+      title5: '5 Minuten Timer - Online-Countdown',
+      title15: '15 Minuten Timer - Online-Countdown',
+      playLabel: 'Timer starten',
+      pauseLabel: 'Timer pausieren'
+    },
+    pt: {
+      remaining: 'Restante',
+      timesUp: 'Tempo esgotado!',
+      title10: 'Temporizador de 10 Minutos - Contagem Regressiva Online',
+      title5: 'Temporizador de 5 Minutos - Contagem Regressiva Online',
+      title15: 'Temporizador de 15 Minutos - Contagem Regressiva Online',
+      playLabel: 'Iniciar temporizador',
+      pauseLabel: 'Pausar temporizador'
+    },
+    it: {
+      remaining: 'Rimanente',
+      timesUp: 'Tempo scaduto!',
+      title10: 'Timer 10 Minuti - Conto alla Rovescia Online',
+      title5: 'Timer 5 Minuti - Conto alla Rovescia Online',
+      title15: 'Timer 15 Minuti - Conto alla Rovescia Online',
+      playLabel: 'Avvia timer',
+      pauseLabel: 'Pausa timer'
+    }
+  };
+
+  const activeLang = document.documentElement.lang || 'en';
+  const langUI = textTranslations[activeLang] || textTranslations.en;
+
   // --- DOM Elements ---
   const timerContainer = document.querySelector('.timer-card');
   const timerDigits = document.getElementById('timer-digits');
@@ -86,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btnPlayPause.innerHTML = `
       <svg viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
     `;
-    btnPlayPause.setAttribute('aria-label', 'Pause Timer');
+    btnPlayPause.setAttribute('aria-label', langUI.pauseLabel);
 
     // Start background music if selected
     playAmbientMusic();
@@ -100,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btnPlayPause.innerHTML = `
       <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
     `;
-    btnPlayPause.setAttribute('aria-label', 'Play Timer');
+    btnPlayPause.setAttribute('aria-label', langUI.playLabel);
 
     // Pause background music
     stopAmbientMusic();
@@ -114,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Clear active classes
     timerContainer.classList.remove('alarm-active');
-    timerLabel.textContent = 'Remaining';
+    timerLabel.textContent = langUI.remaining;
     
     updateTimerDisplay();
     updateProgressRing();
@@ -129,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
     stopAmbientMusic();
     triggerAlarm();
     
-    timerLabel.textContent = 'Time\'s Up!';
+    timerLabel.textContent = langUI.timesUp;
     timerContainer.classList.add('alarm-active');
     updateFavicon(true);
   }
@@ -162,9 +223,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function getPageTitleBase() {
-    if (defaultDuration === 300) return '5 Minute Timer - Online Countdown';
-    if (defaultDuration === 900) return '15 Minute Timer - Online Countdown';
-    return '10 Minute Timer - Online Countdown';
+    if (defaultDuration === 300) return langUI.title5;
+    if (defaultDuration === 900) return langUI.title15;
+    return langUI.title10;
   }
 
   // Draw dynamic colored dot on SVG favicon to show running/alarm state

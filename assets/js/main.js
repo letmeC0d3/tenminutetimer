@@ -164,5 +164,36 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 8000);
       }, 1200);
     });
+  // --- Language Switcher Redirection ---
+  const langSelect = document.getElementById('select-language');
+  if (langSelect) {
+    langSelect.addEventListener('change', (e) => {
+      const targetLang = e.target.value;
+      const currentPath = window.location.pathname;
+      const pathParts = currentPath.split('/').filter(p => p);
+      
+      const supportedLangs = ['es', 'fr', 'de', 'pt', 'it'];
+      let currentPageName = '';
+      
+      if (pathParts.length > 0) {
+        if (supportedLangs.includes(pathParts[0])) {
+          currentPageName = pathParts.slice(1).join('/');
+        } else {
+          currentPageName = pathParts.join('/');
+        }
+      }
+      
+      if (!currentPageName) {
+        currentPageName = 'index.html';
+      }
+      
+      let targetPath = '/';
+      if (targetLang !== 'en') {
+        targetPath += targetLang + '/';
+      }
+      targetPath += currentPageName;
+      
+      window.location.href = targetPath;
+    });
   }
 });

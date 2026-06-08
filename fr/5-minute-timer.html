@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="fr" data-theme="dark">
 <head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LEQFHFGL9K"></script>
@@ -22,9 +22,16 @@
   <link rel="alternate" hreflang="de" href="https://tenminutetimer.com/de/5-minute-timer.html" />
   <link rel="alternate" hreflang="pt" href="https://tenminutetimer.com/pt/5-minute-timer.html" />
   <link rel="alternate" hreflang="it" href="https://tenminutetimer.com/it/5-minute-timer.html" />
+  <link rel="alternate" hreflang="x-default" href="https://tenminutetimer.com/fr/5-minute-timer.html" />
+  <link rel="alternate" hreflang="en" href="https://tenminutetimer.com/fr/5-minute-timer.html" />
+  <link rel="alternate" hreflang="es" href="https://tenminutetimer.com/es/5-minute-timer.html" />
+  <link rel="alternate" hreflang="fr" href="https://tenminutetimer.com/fr/5-minute-timer.html" />
+  <link rel="alternate" hreflang="de" href="https://tenminutetimer.com/de/5-minute-timer.html" />
+  <link rel="alternate" hreflang="pt" href="https://tenminutetimer.com/pt/5-minute-timer.html" />
+  <link rel="alternate" hreflang="it" href="https://tenminutetimer.com/it/5-minute-timer.html" />
   <meta name="description" content="Set a five minute timer online for breathing exercises, study, or kitchen. Start a quick 5 minute timer countdown with relaxing background music. Free & simple.">
   <meta name="keywords" content="5 minute timer, 5 min timer, five minute timer, set a 5 minute timer, 5 minute countdown, online 5 minute timer, five min countdown">
-  <link rel="canonical" href="https://tenminutetimer.com/5-minute-timer.html">
+  <link rel="canonical" href="https://tenminutetimer.com/fr/5-minute-timer.html">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
@@ -48,7 +55,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
 
   <!-- JSON-LD Structured Data for WebApplication -->
   <script type="application/ld+json">
@@ -119,22 +126,17 @@
       </a>
       <nav aria-label="Main Navigation">
         <ul class="nav-links" id="nav-links">
-          <li><a href="5-minute-timer.html" class="active">5 Min Timer</a></li>
-          <li><a href="index.html">10 Min Timer</a></li>
-          <li><a href="15-minute-timer.html">15 Min Timer</a></li>
-          <li><a href="about.html">About</a></li>
+          <li><a href="5-minute-timer.html" class="active">5 Min</a></li>
+          <li><a href="index.html">10 Min</a></li>
+          <li><a href="15-minute-timer.html">15 Min</a></li>
+          <li><a href="about.html">À Propos</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
       <div class="nav-actions">
         <div class="language-switcher">
           <select id="select-language" aria-label="Change language">
-            <option value="en" selected>EN</option>
-            <option value="es">ES</option>
-            <option value="fr">FR</option>
-            <option value="de">DE</option>
-            <option value="pt">PT</option>
-            <option value="it">IT</option>
+            <option value="en">EN</option> <option value="es">ES</option> <option value="fr" selected>FR</option> <option value="de">DE</option> <option value="pt">PT</option> <option value="it">IT</option>
           </select>
         </div>
         <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Theme">
@@ -171,7 +173,7 @@
           </svg>
           <div class="timer-text-container">
             <span class="timer-digits" id="timer-digits" aria-live="polite">05:00</span>
-            <span class="timer-label" id="timer-label">Remaining</span>
+            <span class="timer-label" id="timer-label">Restant</span>
           </div>
         </div>
 
@@ -194,28 +196,28 @@
             
             <!-- Sound Alerter Dropdown -->
             <div class="settings-row" style="flex: 1;">
-              <label for="select-alarm">Alarm Sound</label>
+              <label for="select-alarm">Sonnerie d'Alarme</label>
               <div class="select-wrapper">
                 <select id="select-alarm">
-                  <option value="chime" selected>Warm Chime</option>
+                  <option value="chime" selected>Carillon Doux</option>
                   <option value="beep">Digital Beep</option>
                   <option value="bell">Tibetan Bell</option>
-                  <option value="woodblock">Woodblock Click</option>
-                  <option value="none">None (Silent)</option>
+                  <option value="woodblock">Bloc de Bois Click</option>
+                  <option value="none">Aucun (Silencieux) (Silent)</option>
                 </select>
               </div>
             </div>
 
             <!-- Ambient Music Dropdown -->
             <div class="settings-row" style="flex: 1;">
-              <label for="select-music">Focus Music</label>
+              <label for="select-music">Musique de Concentration</label>
               <div class="select-wrapper">
                 <select id="select-music">
-                  <option value="none" selected>None (Silence)</option>
-                  <option value="rain">Rain Sounds</option>
-                  <option value="ocean">Ocean Waves</option>
-                  <option value="drone">Cosmic Drone</option>
-                  <option value="synth">Lofi Synth Chords</option>
+                  <option value="none" selected>None (Aucun (Silence))</option>
+                  <option value="rain">Bruit de Pluie Sounds</option>
+                  <option value="ocean">Vagues de l'Océan Waves</option>
+                  <option value="drone">Bourdon Cosmique</option>
+                  <option value="synth">Accords Lofi</option>
                 </select>
               </div>
             </div>
@@ -235,22 +237,22 @@
 
         <!-- Presets -->
         <div class="presets-grid">
-          <button class="preset-btn" data-time="60" aria-label="Set 1 minute timer">1 Min</button>
-          <button class="preset-btn" data-time="180" aria-label="Set 3 minute timer">3 Min</button>
-          <button class="preset-btn active" data-time="300" aria-label="Set 5 minute timer">5 Min</button>
-          <button class="preset-btn" data-time="600" aria-label="Set 10 minute timer">10 Min</button>
-          <button class="preset-btn" data-time="900" aria-label="Set 15 minute timer">15 Min</button>
-          <button class="preset-btn" data-time="custom" id="btn-custom-toggle" aria-label="Set Custom Timer Length">Custom</button>
+          <button class="preset-btn" data-time="60" aria-label="1 Min">1 Min</button>
+          <button class="preset-btn" data-time="180" aria-label="3 Min">3 Min</button>
+          <button class="preset-btn active" data-time="300" aria-label="5 Min">5 Min</button>
+          <button class="preset-btn" data-time="600" aria-label="10 Min">10 Min</button>
+          <button class="preset-btn" data-time="900" aria-label="15 Min">15 Min</button>
+          <button class="preset-btn" data-time="custom" id="btn-custom-toggle" aria-label="Custom">Personnalisé</button>
         </div>
 
         <!-- Custom Input Drawer -->
         <div class="custom-drawer" id="custom-drawer">
           <div class="custom-input-group">
-            <input type="number" id="custom-min" placeholder="00" min="0" max="599" aria-label="Custom Minutes">
+            <input type="number" id="custom-min" placeholder="00" min="0" max="599" aria-label="Min">
             <span>m</span>
-            <input type="number" id="custom-sec" placeholder="00" min="0" max="59" aria-label="Custom Seconds">
+            <input type="number" id="custom-sec" placeholder="00" min="0" max="59" aria-label="Sec">
             <span>s</span>
-            <button class="btn-custom-start" id="btn-custom-start">Start</button>
+            <button class="btn-custom-start" id="btn-custom-start">Démarrer</button>
           </div>
         </div>
 
@@ -260,19 +262,19 @@
     <!-- SEO Optimized Content Area -->
     <section class="seo-section" aria-label="Information about Five Minute Timers">
       <div class="seo-card">
-        <h1>Online 5 Minute Timer: Free 5-Min Countdown</h1>
-        <p>Looking for a quick, reliable <strong>5 minute timer</strong>? Whether you are practicing breathing techniques, timing a quick soft-boiled egg, or running a 5-minute classroom break, our free web countdown timer provides a beautiful, modern solution. Pre-set to 5:00, all you need to do is click Play to get started.</p>
+        <h1>Minuteur 5 Minutes en Ligne : Compte à rebours gratuit de 5 min</h1>
+        <p>Besoin d'un <strong>minuteur de 5 minutes</strong> ? Que ce soit pour des exercices de respiration, la cuisson des œufs ou une pause, notre minuteur en ligne gratuit est la solution idéale. Pré-réglé sur 5:00, cliquez simplement sur Démarrer.</p>
         
-        <p>This <strong>five minute timer</strong> works seamlessly on all devices. With real-time circular countdown progress and built-in ambient noise, you can enjoy a highly visual, distracting-free countdown experience.</p>
+        <p>Ce <strong>minuteur cinq minutes</strong> s'adapte à tous les écrans, mobiles ou tablettes. Avec son cercle visuel et sa musique relaxante, profitez d'un décompte sans stress.</p>
         
         <div class="feature-grid">
           <div class="feature-box">
             <h3>🧘 Mindful Breaks</h3>
-            <p>Perfect for taking a quick five-minute meditation, stretch, or breathing block during your workday.</p>
+            <p>Pour lancer votre compte à rebours de cinq minutes :</p>
           </div>
           <div class="feature-box">
             <h3>🍳 Kitchen Helper</h3>
-            <p>Boiling eggs, brewing green tea, or warming up food? Keep track with precise synthesised alarms.</p>
+            <p>Le format 5 minutes est l'un des plus utilisés au quotidien :</p>
           </div>
           <div class="feature-box">
             <h3>🍅 Pomodoro Rest</h3>
@@ -280,43 +282,43 @@
           </div>
         </div>
 
-        <h2>How to Use the 5 Min Timer</h2>
+        <h2>Comment utiliser le minuteur 5 min</h2>
         <p>To start your **five minute timer countdown**, just:</p>
         <ol>
-          <li>Press the glowing **Play** button in the center of the ring.</li>
-          <li>Choose from relaxing background sounds like **Rain** or **Ocean Waves** if you are meditating or taking a break.</li>
-          <li>Wait for the timer to reach 00:00. Once it finishes, the screen will flash and your selected alarm (e.g. Warm Chime) will trigger.</li>
+          <li>Cliquez sur le bouton central **Démarrer**.</li>
+          <li>Choose from relaxing background sounds like **Rain** or **Vagues de l'Océan** if you are meditating or taking a break.</li>
+          <li>Wait for the timer to reach 00:00. Once it finishes, the screen will flash and your selected alarm (e.g. Carillon Doux) will trigger.</li>
         </ol>
 
-        <h2>Common Uses for a 5 Minute Countdown</h2>
+        <h2>Utilisations fréquentes d'un décompte de 5 minutes</h2>
         <p>A **5 minute countdown** is one of the most versatile timeframes in daily life:</p>
         <ul>
-          <li><strong>Breathing Exercises</strong>: Box breathing or 4-7-8 breathing techniques fit perfectly into a 5-minute slot.</li>
-          <li><strong>Quick Tidy-Up</strong>: Challenge yourself or your kids to clean up as much of a room as possible in five minutes.</li>
-          <li><strong>Plank or Workout Tracker</strong>: Track short workouts, HIIT intervals, or core exercises with ease.</li>
+          <li><strong>Exercices de relaxation</strong>: Idéal pour la respiration guidée ou la cohérence cardiaque.</li>
+          <li><strong>Rangement express</strong>: Lancez un défi de rangement de 5 minutes pour vos enfants.</li>
+          <li><strong>Pause Pomodoro</strong>: Chronométrez le temps de pause court de la méthode Pomodoro.</li>
         </ul>
 
         <!-- Accordion FAQ Area -->
-        <h2>Frequently Asked Questions</h2>
+        <h2>Foire Aux Questions</h2>
         <div class="faq-container">
           
           <div class="faq-item">
             <button class="faq-question">
-              <span>How do I set a 5 minute timer?</span>
+              <span>Le son fonctionne-t-il sur téléphone verrouillé ?</span>
               <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer">
-              <p>Simple! Load this page and click the play button. The widget is pre-configured to exactly 5:00. If you wish to reset it back to 5 minutes, click the reset arrow icon.</p>
+              <p>Oui. L'API audio du navigateur tourne en arrière-plan. Tant que l'onglet reste ouvert, la sonnerie s'activera.</p>
             </div>
           </div>
 
           <div class="faq-item">
             <button class="faq-question">
-              <span>What are the best uses for a five minute timer?</span>
+              <span>Comment remettre le minuteur à zéro ?</span>
               <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer">
-              <p>A five-minute timer is most popular for Pomodoro rest intervals, steeping green and black teas, boiling eggs, brief morning stretches, and short speed-writing drills.</p>
+              <p>Cliquez simplement sur le bouton de réinitialisation (la flèche en boucle) pour revenir à 05:00.</p>
             </div>
           </div>
 
@@ -349,10 +351,10 @@
           <span class="logo-text-desktop">TenMinuteTimer.com</span>
           <span class="logo-text-mobile">10 Min Timer</span>
         </a>
-        <p>A beautiful, high-precision web countdown timer with integrated focus music. Designed for productivity, classrooms, study, and play.</p>
+        <p>Un magnifique minuteur de compte à rebours en ligne de haute précision avec musique intégrée. Conçu pour la productivité, l'école, le travail et le jeu.</p>
       </div>
       <div class="footer-nav">
-        <h4>Timers</h4>
+        <h4>Minuteurs</h4>
         <ul>
           <li><a href="5-minute-timer.html">5 Minute Timer</a></li>
           <li><a href="index.html">10 Minute Timer</a></li>
@@ -360,23 +362,23 @@
         </ul>
       </div>
       <div class="footer-nav">
-        <h4>Legal & Info</h4>
+        <h4>Informations Légales</h4>
         <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="about.html">À Propos</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Politique de Confidentialité</a></li>
+          <li><a href="terms.html">Conditions d'Utilisation</a></li>
         </ul>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2026 TenMinuteTimer.com. All rights reserved.</span>
-        <span>Made for focused minds.</span>
+        <span>&copy; 2026 TenMinuteTimer.com. Tous droits réservés.</span>
+        <span>Fait pour les esprits concentrés.</span>
       </div>
     </div>
   </footer>
 
   <!-- Scripts -->
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/timer.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/timer.js"></script>
 </body>
 </html>

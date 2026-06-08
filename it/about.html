@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="it" data-theme="dark">
 <head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LEQFHFGL9K"></script>
@@ -22,8 +22,15 @@
   <link rel="alternate" hreflang="de" href="https://tenminutetimer.com/de/about.html" />
   <link rel="alternate" hreflang="pt" href="https://tenminutetimer.com/pt/about.html" />
   <link rel="alternate" hreflang="it" href="https://tenminutetimer.com/it/about.html" />
+  <link rel="alternate" hreflang="x-default" href="https://tenminutetimer.com/it/about.html" />
+  <link rel="alternate" hreflang="en" href="https://tenminutetimer.com/it/about.html" />
+  <link rel="alternate" hreflang="es" href="https://tenminutetimer.com/es/about.html" />
+  <link rel="alternate" hreflang="fr" href="https://tenminutetimer.com/fr/about.html" />
+  <link rel="alternate" hreflang="de" href="https://tenminutetimer.com/de/about.html" />
+  <link rel="alternate" hreflang="pt" href="https://tenminutetimer.com/pt/about.html" />
+  <link rel="alternate" hreflang="it" href="https://tenminutetimer.com/it/about.html" />
   <meta name="description" content="Learn about the philosophy and science of timeboxing behind Ten Minute Timer. Discover why we built a premium, online productivity tool with audio synthesis.">
-  <link rel="canonical" href="https://tenminutetimer.com/about.html">
+  <link rel="canonical" href="https://tenminutetimer.com/it/about.html">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
@@ -40,7 +47,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
 
@@ -57,22 +64,17 @@
       </a>
       <nav aria-label="Main Navigation">
         <ul class="nav-links" id="nav-links">
-          <li><a href="5-minute-timer.html">5 Min Timer</a></li>
-          <li><a href="index.html">10 Min Timer</a></li>
-          <li><a href="15-minute-timer.html">15 Min Timer</a></li>
-          <li><a href="about.html" class="active">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="5-minute-timer.html">5 Min</a></li>
+          <li><a href="index.html">10 Min</a></li>
+          <li><a href="15-minute-timer.html">15 Min</a></li>
+          <li><a href="about.html" class="active">Chi Siamo</a></li>
+          <li><a href="contact.html">Contatti</a></li>
         </ul>
       </nav>
       <div class="nav-actions">
         <div class="language-switcher">
           <select id="select-language" aria-label="Change language">
-            <option value="en" selected>EN</option>
-            <option value="es">ES</option>
-            <option value="fr">FR</option>
-            <option value="de">DE</option>
-            <option value="pt">PT</option>
-            <option value="it">IT</option>
+            <option value="en">EN</option> <option value="es">ES</option> <option value="fr">FR</option> <option value="de">DE</option> <option value="pt">PT</option> <option value="it" selected>IT</option>
           </select>
         </div>
         <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Theme">
@@ -89,18 +91,18 @@
   <main>
     <section class="seo-section" aria-label="About Our Company">
       <div class="seo-card">
-        <h1>About TenMinuteTimer.com</h1>
-        <p>At <strong>TenMinuteTimer.com</strong>, we believe that focus is a practice, and time is its primary container. In an age of endless notifications, complex SaaS suites, and bloat-heavy interfaces, we set out to build the exact opposite: a clean, responsive, and stunningly beautiful countdown utility designed for deep work.</p>
+        <h1>Chi Siamo - TenMinuteTimer.com</h1>
+        <p>Su **TenMinuteTimer.com** crediamo che la concentrazione vada allenata e che il tempo sia la sua risorsa principale. Contro la marea di notifiche e app complicate, abbiamo creato questo timer minimale, veloce e senza pubblicità.</p>
         
-        <h2>Our Philosophy: The Power of Timeboxing</h2>
-        <p>Timeboxing is a simple time-management technique where you allocate a fixed time period—called a time box—to a planned activity. A ten-minute block is psychologically powerful because it is "deceptively small." It represents a low barrier to entry. If you are struggling with procrastination, telling yourself <em>"I will work on this slide deck for just ten minutes"</em> helps you start. Once you bypass the initial inertia, you will almost always find the momentum to continue.</p>
+        <h2>La nostra filosofia: Il Timeboxing</h2>
+        <p>Il timeboxing consiste nell'assegnare una durata fissa a un'attività. Lavorare per blocchi da 10 minuti abbatte la pigrizia iniziale. Dedicati a un compito per soli dieci minuti: superato l'inizio, quasi certamente vorrai continuare.</p>
 
-        <h2>Modern Engineering, Retro Speeds</h2>
-        <p>To ensure our tool loads instantly on any connection (a critical factor in search ranking and user experience), we built it from scratch using vanilla HTML5, CSS3, and JavaScript. We made several key architectural decisions to improve performance:</p>
+        <h2>Tecnologia leggera per la massima velocità</h2>
+        <p>Per garantire un caricamento istantaneo, abbiamo programmato il sito con tecnologie web native:</p>
         <ul>
-          <li><strong>Zero Audio File Downloads</strong>: Traditional web timers require downloading mega-bytes of MP3 or WAV alarm files. We use the Web Audio API to synthesize alarm sound waves and ambient background tracks (rain, ocean waves, cosmic focus hum) directly inside your sound card. It works 100% offline and loads in milliseconds.</li>
-          <li><strong>No Trackers or Framework Bloat</strong>: There is no heavy framework like React or Angular loading behind the scenes. This allows us to achieve a perfect 100/100 Core Web Vitals performance score.</li>
-          <li><strong>Accurate Background Ticking</strong>: Browsers heavily throttle JavaScript timers when a tab is in the background. We use system-epoch validation logic to ensure that even if your browser suspends the tab, your alarms play at the precise millisecond they are supposed to.</li>
+          <li><strong>Nessun file audio da scaricare</strong>: Usiamo la Web Audio API per sintetizzare allarmi e sottofondi direttamente sul tuo dispositivo, riducendo a zero il peso della pagina.</li>
+          <li><strong>Zero tracciamenti</strong>: Nessun codice di terze parti o framework pesanti come React che rallentano la navigazione.</li>
+          <li><strong>Sincronizzazione oraria</strong>: Controlliamo lo scorrimento dei secondi con l'orologio interno del sistema per evitare ritardi in background.</li>
         </ul>
 
         <h2>Who is This For?</h2>
@@ -128,10 +130,10 @@
           <span class="logo-text-desktop">TenMinuteTimer.com</span>
           <span class="logo-text-mobile">10 Min Timer</span>
         </a>
-        <p>A beautiful, high-precision web countdown timer with integrated focus music. Designed for productivity, classrooms, study, and play.</p>
+        <p>Un bellissimo e precisissimo timer per il conto alla rovescia online con musica di sottofondo integrata. Ideato per la produttività, lo studio, lo sport e la scuola.</p>
       </div>
       <div class="footer-nav">
-        <h4>Timers</h4>
+        <h4>Timer</h4>
         <ul>
           <li><a href="5-minute-timer.html">5 Minute Timer</a></li>
           <li><a href="index.html">10 Minute Timer</a></li>
@@ -139,22 +141,22 @@
         </ul>
       </div>
       <div class="footer-nav">
-        <h4>Legal & Info</h4>
+        <h4>Legali & Info</h4>
         <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="about.html">Chi Siamo</a></li>
+          <li><a href="contact.html">Contatti</a></li>
+          <li><a href="privacy.html">Informativa sulla Privacy</a></li>
+          <li><a href="terms.html">Termini di Servizio</a></li>
         </ul>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2026 TenMinuteTimer.com. All rights reserved.</span>
-        <span>Made for focused minds.</span>
+        <span>&copy; 2026 TenMinuteTimer.com. Tutti i diritti riservati.</span>
+        <span>Fatto per menti concentrate.</span>
       </div>
     </div>
   </footer>
 
   <!-- Scripts -->
-  <script src="assets/js/main.js"></script>
+  <script src="../assets/js/main.js"></script>
 </body>
 </html>
