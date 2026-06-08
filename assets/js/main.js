@@ -164,6 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 8000);
       }, 1200);
     });
+  }
   // --- Language Switcher Redirection ---
   const langSelect = document.getElementById('select-language');
   if (langSelect) {
