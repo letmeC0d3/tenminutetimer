@@ -284,8 +284,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function getPageTitleBase() {
-    if (defaultDuration === 300) return langUI.title5;
-    if (defaultDuration === 900) return langUI.title15;
+    if (defaultDuration === 300) return langUI.title5 || '5 Minute Timer';
+    if (defaultDuration === 900) return langUI.title15 || '15 Minute Timer';
+    if (defaultDuration === 1200) return '20 Minute Timer - Online Countdown';
+    if (defaultDuration === 1500) return '25 Minute Pomodoro Timer - Online Countdown';
+    if (defaultDuration === 1800) return '30 Minute Timer - Online Countdown';
     return langUI.title10;
   }
 
