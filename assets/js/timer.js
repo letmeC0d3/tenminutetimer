@@ -124,6 +124,53 @@ document.addEventListener('DOMContentLoaded', () => {
     return audioCtx;
   }
 
+  // --- Zero-Drift Web Worker with CSP Fallback ---
+  let timerWorker = null;
+  const workerBlobCode = `
+    let intervalId = null;
+    self.onmessage = function(e) {
+      if (e.data === 'start') {
+        if (intervalId) clearInterval(intervalId);
+        intervalId = setInterval(() => self.postMessage('tick'), 250);
+      } else if (e.data === 'stop') {
+        if (intervalId) clearInterval(intervalId);
+        intervalId = null;
+      }
+    };
+  `;
+
+  function initTimerWorker() {
+    try {
+      const blob = new Blob([workerBlobCode], { type: 'application/javascript' });
+      const workerUrl = URL.createObjectURL(blob);
+      timerWorker = new Worker(workerUrl);
+      timerWorker.onmessage = (e) => {
+        if (e.data === 'tick' && isRunning) {
+          tick();
+        }
+      };
+    } catch (err) {
+      console.warn('Web Worker blocked (possibly by strict CSP); falling back to window.setInterval', err);
+      timerWorker = null;
+    }
+  }
+
+  initTimerWorker();
+
+  // Page Visibility API - Instantly eliminate drift when tab is backgrounded & restored
+  document.addEventListener('visibilitychange', () => {
+    if (isRunning && endTime) {
+      const timeRemaining = Math.max(0, Math.ceil((endTime - Date.now()) / 1000));
+      timeLeft = timeRemaining;
+      updateTimerDisplay();
+      updateProgressRing();
+      updateTabTitle();
+      if (timeLeft <= 0) {
+        completeTimer();
+      }
+    }
+  });
+
   function tick() {
     if (!isRunning) return;
     
@@ -144,7 +191,13 @@ document.addEventListener('DOMContentLoaded', () => {
     isRunning = true;
     endTime = Date.now() + timeLeft * 1000;
     
-    timerInterval = setInterval(tick, 100);
+    if (timerWorker) {
+      timerWorker.postMessage('start');
+    } else {
+      if (timerInterval) clearInterval(timerInterval);
+      timerInterval = setInterval(tick, 250);
+    }
+
     btnPlayPause.innerHTML = `
       <svg viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
     `;
@@ -156,7 +209,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function pauseTimer() {
     isRunning = false;
-    clearInterval(timerInterval);
+    
+    if (timerWorker) {
+      timerWorker.postMessage('stop');
+    }
+    if (timerInterval) {
+      clearInterval(timerInterval);
+      timerInterval = null;
+    }
     timeLeft = Math.max(0, Math.ceil((endTime - Date.now()) / 1000));
     
     btnPlayPause.innerHTML = `
@@ -656,8 +716,32 @@ document.addEventListener('DOMContentLoaded', () => {
     synthesizeAlarm(type, volume);
   });
 
-  // Background Music change selector
+  // Ambient Sound Chips & Dropdown Bidirectional Synchronization
+  const soundChips = document.querySelectorAll('.sound-chip');
+
+  function syncSoundChips(selectedSound) {
+    soundChips.forEach(chip => {
+      const isSelected = chip.dataset.sound === selectedSound;
+      chip.classList.toggle('active', isSelected);
+      chip.setAttribute('aria-checked', isSelected ? 'true' : 'false');
+    });
+  }
+
+  soundChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      const sound = chip.dataset.sound;
+      if (selectMusic) {
+        selectMusic.value = sound;
+      }
+      syncSoundChips(sound);
+      if (isRunning) {
+        playAmbientMusic();
+      }
+    });
+  });
+
   selectMusic.addEventListener('change', () => {
+    syncSoundChips(selectMusic.value);
     if (isRunning) {
       playAmbientMusic();
     }
@@ -701,6 +785,41 @@ document.addEventListener('DOMContentLoaded', () => {
       startTimer();
       updateFavicon();
     }
+  });
+
+  // Productivity Hub Preset Load Handlers
+  const presetLoadButtons = document.querySelectorAll('.btn-load-preset');
+  presetLoadButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const duration = parseInt(btn.dataset.duration);
+      const music = btn.dataset.music;
+      if (duration && !isNaN(duration)) {
+        resetTimer(duration);
+        if (music && selectMusic) {
+          selectMusic.value = music;
+          syncSoundChips(music);
+        }
+        startTimer();
+        updateFavicon();
+        const timerWidget = document.getElementById('timer-widget');
+        if (timerWidget) {
+          timerWidget.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
+    });
+  });
+
+  // Quick Navigation Pills (Above Timer) for custom duration clicks
+  const quickPillButtons = document.querySelectorAll('.quick-pill[data-time]');
+  quickPillButtons.forEach(pill => {
+    pill.addEventListener('click', () => {
+      const seconds = parseInt(pill.dataset.time);
+      if (seconds && !isNaN(seconds)) {
+        document.querySelectorAll('.quick-pill').forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        resetTimer(seconds);
+      }
+    });
   });
 
   // Keyboard controls

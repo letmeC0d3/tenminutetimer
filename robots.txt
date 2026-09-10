@@ -1,8 +1,21 @@
 # Robots.txt for TenMinuteTimer.com
-# Allowed all search agents to crawl the entire website
+# Explicit directives for major search engines and crawl budget protection
+
+User-agent: Googlebot
+Allow: /
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /assets/images/
+Allow: /*.html$
+Disallow: /*?*
+
+User-agent: Bingbot
+Allow: /
+Disallow: /*?*
 
 User-agent: *
 Allow: /
+Disallow: /*?*
 
 # Sitemap Location
 Sitemap: https://tenminutetimer.com/sitemap.xml
