@@ -324,6 +324,158 @@ main {
   pointer-events: none;
 }
 
+/* ==========================================================================
+   Cozy Cat Mode & Rocking Chair Assembly
+   ========================================================================== */
+.cat-mode-toggle-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  z-index: 2;
+  width: 100%;
+}
+
+.cat-mode-btn,
+button.cat-mode-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1.1rem;
+  border-radius: 9999px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-glass);
+  color: var(--text-secondary);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.cat-mode-btn:hover,
+button.cat-mode-btn:hover {
+  transform: translateY(-2px);
+  border-color: #f472b6;
+  color: #ffffff;
+  box-shadow: 0 0 18px rgba(244, 114, 182, 0.35);
+}
+
+.cat-mode-btn.active,
+button.cat-mode-btn.active {
+  background: linear-gradient(135deg, #ec4899, #8b5cf6);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 0 22px rgba(236, 72, 153, 0.45);
+}
+
+.cat-mode-btn .cat-icon {
+  font-size: 1.1rem;
+  transition: transform var(--transition-fast);
+}
+
+.cat-mode-btn:hover .cat-icon {
+  transform: scale(1.2) rotate(-8deg);
+}
+
+/* Cat Scene Container */
+.cat-scene-wrapper {
+  display: none;
+  width: 100%;
+  max-width: 220px;
+  margin: 0 auto 0.75rem auto;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  position: relative;
+}
+
+.timer-card.cat-mode-active .cat-scene-wrapper {
+  display: flex;
+  animation: catFadeIn 0.4s ease-out;
+}
+
+@keyframes catFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.rocking-chair-assembly {
+  width: 180px;
+  height: 155px;
+  transform-origin: 50% 90%;
+  transition: transform 0.4s ease-out;
+}
+
+/* Chair Rocks when timer is active */
+.timer-card.cat-mode-active.timer-running .rocking-chair-assembly {
+  animation: rockChair 2.8s ease-in-out infinite alternate;
+}
+
+@keyframes rockChair {
+  0% {
+    transform: rotate(-6deg);
+  }
+  100% {
+    transform: rotate(6deg);
+  }
+}
+
+/* Cat Tail subtle breathing animation */
+.cat-tail {
+  transform-origin: 70px 95px;
+  animation: catTailSway 3.8s ease-in-out infinite alternate;
+}
+
+@keyframes catTailSway {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-9deg);
+  }
+}
+
+/* Floating Zzz */
+.cat-zzz {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  fill: #e9d5ff;
+  opacity: 0;
+}
+
+.timer-card.cat-mode-active.timer-running .cat-zzz.z1 {
+  animation: zFloat 3.2s ease-out 0s infinite;
+}
+.timer-card.cat-mode-active.timer-running .cat-zzz.z2 {
+  animation: zFloat 3.2s ease-out 1.1s infinite;
+}
+.timer-card.cat-mode-active.timer-running .cat-zzz.z3 {
+  animation: zFloat 3.2s ease-out 2.2s infinite;
+}
+
+@keyframes zFloat {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0.8);
+  }
+  40% {
+    opacity: 0.85;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(8px, -20px) scale(1.25);
+  }
+}
+
 /* SVG Progress Timer with Zero CLS Containment */
 .timer-display-wrapper {
   position: relative;

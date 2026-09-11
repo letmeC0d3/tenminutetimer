@@ -198,6 +198,8 @@ document.addEventListener('DOMContentLoaded', () => {
       timerInterval = setInterval(tick, 250);
     }
 
+    timerContainer.classList.add('timer-running');
+
     btnPlayPause.innerHTML = `
       <svg viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
     `;
@@ -209,6 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function pauseTimer() {
     isRunning = false;
+    timerContainer.classList.remove('timer-running');
     
     if (timerWorker) {
       timerWorker.postMessage('stop');
@@ -236,6 +239,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Clear active classes
     timerContainer.classList.remove('alarm-active');
+    timerContainer.classList.remove('timer-running');
     timerLabel.textContent = langUI.remaining;
     
     updateTimerDisplay();
@@ -250,6 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
     pauseTimer();
     stopAmbientMusic();
     triggerAlarm();
+    timerContainer.classList.remove('timer-running');
     
     timerLabel.textContent = langUI.timesUp;
     timerContainer.classList.add('alarm-active');
@@ -657,6 +662,42 @@ document.addEventListener('DOMContentLoaded', () => {
           synthSequencerId = null;
         }
       };
+    } 
+    else if (track === 'purr') {
+      // Synthesize Warm Soothing Cat Purr
+      const purrOsc = ctx.createOscillator();
+      purrOsc.type = 'sawtooth';
+      purrOsc.frequency.setValueAtTime(28, ctx.currentTime);
+
+      const filter = ctx.createBiquadFilter();
+      filter.type = 'lowpass';
+      filter.frequency.setValueAtTime(110, ctx.currentTime);
+
+      const purrLfo = ctx.createOscillator();
+      purrLfo.frequency.setValueAtTime(23, ctx.currentTime); // 23Hz purr vibration
+      const purrLfoGain = ctx.createGain();
+      purrLfoGain.gain.setValueAtTime(0.5, ctx.currentTime);
+      purrLfo.connect(purrLfoGain);
+
+      const purrGain = ctx.createGain();
+      purrGain.gain.setValueAtTime(0.65, ctx.currentTime);
+      purrLfoGain.connect(purrGain.gain);
+
+      purrOsc.connect(filter);
+      filter.connect(purrGain);
+      purrGain.connect(ambientMusicVolumeNode);
+
+      purrOsc.start();
+      purrLfo.start();
+
+      ambientMusicNode = {
+        stop: () => {
+          try {
+            purrOsc.stop();
+            purrLfo.stop();
+          } catch(e) {}
+        }
+      };
     }
   }
 
@@ -824,6 +865,54 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // --- Cat Mode Toggle & Initialization ---
+  const catModeBtn = document.getElementById('cat-mode-btn');
+  const catSceneWrapper = document.getElementById('cat-scene-wrapper');
+  const isDefaultCatPage = document.body.dataset.catDefault === 'true';
+
+  if (catModeBtn || catSceneWrapper || isDefaultCatPage) {
+    const storedCatMode = isDefaultCatPage ? true : localStorage.getItem('catMode') === 'true';
+
+    function setCatMode(active) {
+      if (active) {
+        timerContainer.classList.add('cat-mode-active');
+        if (catModeBtn) {
+          catModeBtn.classList.add('active');
+          catModeBtn.setAttribute('aria-pressed', 'true');
+          catModeBtn.innerHTML = '<span class="cat-icon">🐱</span> <span class="cat-btn-text">Cat Mode: On</span>';
+        }
+        localStorage.setItem('catMode', 'true');
+      } else {
+        timerContainer.classList.remove('cat-mode-active');
+        if (catModeBtn) {
+          catModeBtn.classList.remove('active');
+          catModeBtn.setAttribute('aria-pressed', 'false');
+          catModeBtn.innerHTML = '<span class="cat-icon">🐱</span> <span class="cat-btn-text">Cat Mode: Off</span>';
+        }
+        localStorage.setItem('catMode', 'false');
+      }
+    }
+
+    if (storedCatMode) {
+      setCatMode(true);
+    }
+
+    if (catModeBtn) {
+      catModeBtn.addEventListener('click', () => {
+        const isActive = timerContainer.classList.contains('cat-mode-active');
+        setCatMode(!isActive);
+        if (!isActive && selectMusic) {
+          // Auto-suggest cozy purr audio
+          selectMusic.value = 'purr';
+          syncSoundChips('purr');
+          if (isRunning) {
+            playAmbientMusic();
+          }
+        }
+      });
+    }
+  }
 
   // Keyboard controls
   document.addEventListener('keydown', (e) => {

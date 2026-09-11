@@ -18,6 +18,7 @@ const pages = [
   { slug: '20-minute-timer.html', priority: '0.9', changefreq: 'weekly' },
   { slug: '25-minute-timer.html', priority: '0.9', changefreq: 'weekly' },
   { slug: '30-minute-timer.html', priority: '0.9', changefreq: 'weekly' },
+  { slug: 'cat-timer.html', priority: '0.9', changefreq: 'weekly' },
   { slug: 'about.html', priority: '0.5', changefreq: 'monthly' },
   { slug: 'contact.html', priority: '0.4', changefreq: 'monthly' },
   { slug: 'privacy.html', priority: '0.3', changefreq: 'yearly' },
